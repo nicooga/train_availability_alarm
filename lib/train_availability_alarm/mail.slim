@@ -1,0 +1,15 @@
+= for section <- sections do
+  h1= section.title
+
+  table
+    thead
+      th Date
+      th Service
+      th Available seats
+
+    tbody
+      = for service <- section.services do
+        tr
+          td= service.date
+          td= service.service_id
+          td= service.available_seats
